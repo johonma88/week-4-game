@@ -1,0 +1,51 @@
+.jumbotron {
+    background-color: rgba(245, 245, 245, 0); /*transparency*/
+    
+  /* background-color: black; */
+    color: white;
+    text-align:  center;
+    font-family: 'Cinzel', serif;
+    /* background: url(Assets/planet.jpg) no-repeat; */
+    /* text-shadow: black 0.3em 0.3em 0.3em; */
+}
+
+
+
+.panelChar{
+    /* width: 350px; */
+    text-align: center;
+    color: white;
+}
+h2{
+   
+        background-color: rgba(245, 245, 245, 0); /*transparency*/
+   
+}
+.action{
+    text-align: center;
+}
+.panel {
+    background-color: rgba(245, 245, 245, 0); /*transparency*/
+    border: "none";
+}
+.panel-title {
+    background-color: rgba(245, 245, 245, 0); /*transparency*/
+    font-size: 30px;
+}
+
+.image {
+    background-color: rgba(245, 245, 245, 0); /*transparency*/
+}
+
+body{
+    background-image: url(../images/planet.jpg);
+    background-image: url(../images/starWars.jpg);
+}
+
+#hpDarth, #hpPlasma, #hpYoda, #hpHan, #hpChewbacca{
+    color: white;
+    font-size: 25px;
+}
+
+
+
