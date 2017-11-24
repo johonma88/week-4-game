@@ -47,5 +47,9 @@ body{
     font-size: 25px;
 }
 
-
+#player{
+    height:200px;
+    width:160px;
+    border: none;
+}
 

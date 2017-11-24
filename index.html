@@ -27,6 +27,7 @@
 (
 <div class="jumbotron">
     <h1>Star Wars games</h1>
+    <p> <audio src="music.mp3" controls></audio></p>
     
 </div>
 
@@ -47,7 +48,7 @@
             <div class="col-lg-2 colCharacter" id="captainPLasma">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Captain Plasma</h3>
-                            <img class="image imgCharacter" src="assets/images/captain_plasma.png" alt="captainPlasma" id="imgChar captainPlasma " height="200px" width="180px"  >
+                            <img class="image imgCharacter" src="assets/images/captainPlasma.png" alt="captainPlasma" id="imgChar captainPlasma " height="200px" width="180px"  >
                             <br><span id="hpPlasma">Captain Plasma hp</span>
                     </div>
             </div>
@@ -117,27 +118,45 @@
  document.getElementById("hpChewbacca").innerHTML = "Health Power: " + characters.chewbacca.hp; 
 
 
-$(".colCharacter").click(function(){
+ $(".colCharacter").click(function(){
         $(this).hide(); 
         character= ($(this).attr("id"));
         console.log(character);
         console.log(playerstatus);
-});
 
 if (playerstatus==0){
         if(character=="darthVader") {
-                // document.getElementById("player").innerHTML =  "<img src='assets/images/darth-vaider.png' />";
-                console.log(hola);
-                // $('#player').innerHTML= "<img src='assets/images/darth-vaider.png'/>";
-                // document.getElementById('player').src = 'assets/images/darth-vaider.png'
-                $('#player').html("<img src='assets/images/darth-vaider.png' />");        
-
-               
+        console.log('hola');
+        document.getElementById('player').src = 'assets/images/darth-vaider.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        };
+        if(character=="captainPlasma") {
+        console.log('hola');
+        document.getElementById('player').src = 'assets/images/captainPlasma.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="hanSolo") {
+        console.log('hola');
+        document.getElementById('player').src = 'assets/images/hanSolo.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="yoda") {
+        console.log('hola');
+        document.getElementById('player').src = 'assets/images/yoda.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="chewbacca") {
+        console.log('hola');
+        document.getElementById('player').src = 'assets/images/chewbacca.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        };
 }
- }
-
-
-
+});
 
 
 

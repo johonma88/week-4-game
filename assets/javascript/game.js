@@ -16,7 +16,7 @@ var characters = {
         attackPower : 1,
         countAttack: 1,
         status:0,  // defender 0 , attacker1
-        image: 'captain_plasma.png'},
+        image: 'captainPlasma.png'},
    
     hanSolo: {
         name: 'hanSolo',
