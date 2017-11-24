@@ -66,4 +66,14 @@ body{
     text-align: center;
 }
 
+#hpPlayerGame{
+    color: white;
+    font-size: 20px;
+}
+
+#hpEnemyGame{
+    color: white;
+    font-size: 20px;
+}
+
 

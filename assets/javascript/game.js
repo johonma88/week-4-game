@@ -5,7 +5,7 @@ var characters = {
     darthvader: {
         name: 'darthVader',
         hp : 200,
-        attackPower: 1,
+        attackPower: 20,
         countAttack:1,
         status:0,  // defender 0 , attacker1
         image: 'darth-vaider.png' },
@@ -13,7 +13,7 @@ var characters = {
     captainPlasma:{
         name: 'captainPlasma',
         hp :180,
-        attackPower : 1,
+        attackPower : 11,
         countAttack: 1,
         status:0,  // defender 0 , attacker1
         image: 'captainPlasma.png'},
@@ -21,7 +21,7 @@ var characters = {
     hanSolo: {
         name: 'hanSolo',
         hp : 170,
-        attackPower : 1,
+        attackPower : 10,
         countAttack : 1,
         status:0,  // defender 0 , attacker1
         image: 'hanSolo.png'},
@@ -29,7 +29,7 @@ var characters = {
     yoda:{
         name: 'yoda',
         hp :190,
-        attackPower : 1,
+        attackPower : 19,
        countAttack: 1,
        status:0,  // defender 0 , attacker1
        image: 'yoda.png'},
@@ -37,7 +37,7 @@ var characters = {
     chewbacca:{
         name: 'chewbacca',
         hp :170,
-        attackPower : 1,
+        attackPower : 9,
         countAttack: 1,
         status:0,  // defender 0 , attacker1
         image: 'chewbacca.png'}
@@ -45,6 +45,8 @@ var characters = {
 
 var character = "";
 playerstatus=0; //0 empty  1 full
+var hpPlayer =0;
+var hpEnemy =0;
 
 
 console.log("health Power "+ characters.darthvader.hp); 
