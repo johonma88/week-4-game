@@ -86,19 +86,13 @@
             <div class="col-lg-5">
                     <img class= "character" id="player" > 
 
-                    <!-- <div id="player">
-                                <p style="color: white">dfghjkl</p>
-                    </div> -->
-                  
-                       
-
-
             </div>
             <div class="col-lg-2 attack">
                 <div class="button" style="color:white;">Attack</div>
                     
             </div>
-            <div class="col-lg-5 enemies">
+            <div class="col-lg-5">
+                        <img class= "character" id="enemy" > 
                         
             </div>
         
@@ -156,6 +150,39 @@ if (playerstatus==0){
         console.log(playerstatus);
         };
 }
+else {
+        if(character=="darthVader") {
+        console.log('hola');
+        document.getElementById('enemy').src = 'assets/images/darth-vaider.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        };
+        if(character=="captainPlasma") {
+        console.log('hola');
+        document.getElementById('enemy').src = 'assets/images/captainPlasma.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="hanSolo") {
+        console.log('hola');
+        document.getElementById('enemy').src = 'assets/images/hanSolo.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="yoda") {
+        console.log('hola');
+        document.getElementById('enemy').src = 'assets/images/yoda.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        } ;
+        if(character=="chewbacca") {
+        console.log('hola');
+        document.getElementById('enemy').src = 'assets/images/chewbacca.png';
+        playerstatus=1;
+        console.log(playerstatus);
+        };
+}
+
 });
 
 

@@ -50,6 +50,14 @@ body{
 #player{
     height:200px;
     width:160px;
-    border: none;
+    border:"none";
+   
 }
+#enemy{
+    height:200px;
+    width:160px;
+    border:"none";
+    
+}
+
 
