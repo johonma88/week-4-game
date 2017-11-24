@@ -13,9 +13,10 @@
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="includes/js/jquery.messagebox.js"></script>
+
+  
    <!-- External JS File here -->
-   <script type="text/javascript" src="assets/javascript/game.js"></script>
+ <script type="text/javascript" src="assets/javascript/game.js"></script>
   
   <!--link to fonts-->
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
@@ -36,38 +37,38 @@
 
     <div class="panel panel-body">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 colCharacter" id="darthVader">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Darth Vader</h3>
-                            <img class="image" src="assets/images/darth-vaider.png" alt="darthVader" id="imgChar imgDarthvader " height="200px" width="180px">
-                            <br><span id="hpDarth">Darth Vader HP</span>
+                            <img class="image imgCharacter" src="assets/images/darth-vaider.png" alt="darthVader" id="imgChar imgDarthvader " height="200px" width="180px">
+                            <br><span  id="hpDarth">Darth Vader HP</span>
                     </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 colCharacter" id="captainPLasma">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Captain Plasma</h3>
-                            <img class="image" src="assets/images/captain_plasma.png" alt="captainPlasma" id="imgChar captainPlasma " height="200px" width="180px"  >
+                            <img class="image imgCharacter" src="assets/images/captain_plasma.png" alt="captainPlasma" id="imgChar captainPlasma " height="200px" width="180px"  >
                             <br><span id="hpPlasma">Captain Plasma hp</span>
                     </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 colCharacter" id="hanSolo">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Han Solo</h3>
-                            <img class="image"src="assets/images/hanSolo.png" alt="han" id="imgChar han " height="200px" width="160px" >
+                            <img class="image imgCharacter"src="assets/images/hanSolo.png" alt="han" id="imgChar han " height="200px" width="160px" >
                             <br><span id="hpHan">Han Solo HP</span>
                     </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 colCharacter" id="yoda">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Yoda</h3>
-                            <img class="image" src="assets/images/yoda.png" alt="yoda" id="imgChar yoda " height="200px" width="200px" >
+                            <img class="image imgCharacter" src="assets/images/yoda.png" alt="yoda" id="imgChar yoda " height="200px" width="200px" >
                             <br><span id="hpYoda">Yoda HP</span>
                     </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 colCharacter" id="chewbacca">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Chewbacca</h3>
-                            <img class="image"src="assets/images/chewbacca.png" alt="chewbacca" id="imgChar chewbacca" height="200px" width="180px"   >
+                            <img class="image imgCharacter"src="assets/images/chewbacca.png" alt="chewbacca" id="imgChar chewbacca" height="200px" width="180px"   >
                             <br><span id="hpChewbacca">Chewbacca HP</span> 
                     </div>
             </div>
@@ -81,31 +82,68 @@
 
      <div class="container action">
         <div class="row">
-            <div class="col-lg-5 defender">
+            <div class="col-lg-5">
+                    <img class= "character" id="player" > 
+
+                    <!-- <div id="player">
+                                <p style="color: white">dfghjkl</p>
+                    </div> -->
+                  
+                       
+
 
             </div>
             <div class="col-lg-2 attack">
-                <div class="button" style+"color:white;">Attack</div>
+                <div class="button" style="color:white;">Attack</div>
                     
             </div>
-            <div class="col-lg-5 attacker">
+            <div class="col-lg-5 enemies">
                         
             </div>
         
         </div>     
     
     </div> 
+
     
- <script type="text/javascript">
- 
- document.getElementById("hpDarth").innerHTML = "Health Power! " + characters[0].hp;
- document.getElementById("hpPlasma").innerHTML = "Health Power! " + characters[1].hp;
- document.getElementById("hpHan").innerHTML = "Health Power! " + characters[2].hp;
- document.getElementById("hpYoda").innerHTML = "Health Power! " + characters[3].hp;
- document.getElementById("hpChewbacca").innerHTML = "Health Power! " + characters[4].hp;
 
 
- </script>
+ <script>
+
+ document.getElementById("hpDarth").innerHTML = "Health Power: " + characters.darthvader.hp;
+ document.getElementById("hpPlasma").innerHTML = "Health Power: " + characters.captainPlasma.hp;
+ document.getElementById("hpHan").innerHTML = "Health Power: " + characters.hanSolo.hp;
+ document.getElementById("hpYoda").innerHTML = "Health Power: " + characters.yoda.hp;
+ document.getElementById("hpChewbacca").innerHTML = "Health Power: " + characters.chewbacca.hp; 
+
+
+$(".colCharacter").click(function(){
+        $(this).hide(); 
+        character= ($(this).attr("id"));
+        console.log(character);
+        console.log(playerstatus);
+});
+
+if (playerstatus==0){
+        if(character=="darthVader") {
+                // document.getElementById("player").innerHTML =  "<img src='assets/images/darth-vaider.png' />";
+                console.log(hola);
+                // $('#player').innerHTML= "<img src='assets/images/darth-vaider.png'/>";
+                // document.getElementById('player').src = 'assets/images/darth-vaider.png'
+                $('#player').html("<img src='assets/images/darth-vaider.png' />");        
+
+               
+}
+ }
+
+
+
+
+
+
+
+
+ </script> 
       
     
 
