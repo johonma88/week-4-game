@@ -27,7 +27,7 @@
 (
 <div class="jumbotron">
     <h1>Star Wars games</h1>
-    <p> <audio src="music.mp3" controls></audio></p>
+    <p> <audio src="assets/music/Star Wars The Force Theme.mp3" autoplay="autoplay" ></audio></p>
     
 </div>
 
@@ -45,7 +45,7 @@
                             <br><span  id="hpDarth">Darth Vader HP</span>
                     </div>
             </div>
-            <div class="col-lg-2 colCharacter" id="captainPLasma">
+            <div class="col-lg-2 colCharacter" id="captainPlasma">
                     <div class="panel panel-default panelChar" style="border: none">
                             <h3 class="panel-title panelChar">Captain Plasma</h3>
                             <img class="image imgCharacter" src="assets/images/captainPlasma.png" alt="captainPlasma" id="imgChar captainPlasma " height="200px" width="180px"  >
@@ -79,6 +79,8 @@
 
     <div class=" container message" > 
             <h1 id="msj" style="text-align:center; color: white; font-size:40px;">Choose your Character</h1>
+            <br>
+            <br>
      </div>
 
      <div class="container action">
@@ -87,8 +89,8 @@
                     <img class= "character" id="player" > 
 
             </div>
-            <div class="col-lg-2 attack">
-                <div class="button" style="color:white;">Attack</div>
+            <div class="col-lg-2">
+                <div class="button" id="attack" style="color:white;"></div>
                     
             </div>
             <div class="col-lg-5">
@@ -124,30 +126,35 @@ if (playerstatus==0){
         document.getElementById('player').src = 'assets/images/darth-vaider.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("msj").innerHTML = "Choose your enemy ";
         };
         if(character=="captainPlasma") {
         console.log('hola');
         document.getElementById('player').src = 'assets/images/captainPlasma.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("msj").innerHTML = "Choose your enemy ";
         } ;
         if(character=="hanSolo") {
         console.log('hola');
         document.getElementById('player').src = 'assets/images/hanSolo.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("msj").innerHTML = "Choose your enemy ";
         } ;
         if(character=="yoda") {
         console.log('hola');
         document.getElementById('player').src = 'assets/images/yoda.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("msj").innerHTML = "Choose your enemy ";
         } ;
         if(character=="chewbacca") {
         console.log('hola');
         document.getElementById('player').src = 'assets/images/chewbacca.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("msj").innerHTML = "Choose your enemy ";
         };
 }
 else {
@@ -156,30 +163,36 @@ else {
         document.getElementById('enemy').src = 'assets/images/darth-vaider.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("attack").innerHTML = "Attack ";
+        
         };
         if(character=="captainPlasma") {
         console.log('hola');
         document.getElementById('enemy').src = 'assets/images/captainPlasma.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("attack").innerHTML = "Attack ";
         } ;
         if(character=="hanSolo") {
         console.log('hola');
         document.getElementById('enemy').src = 'assets/images/hanSolo.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("attack").innerHTML = "Attack ";
         } ;
         if(character=="yoda") {
         console.log('hola');
         document.getElementById('enemy').src = 'assets/images/yoda.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("attack").innerHTML = "Attack ";
         } ;
         if(character=="chewbacca") {
         console.log('hola');
         document.getElementById('enemy').src = 'assets/images/chewbacca.png';
         playerstatus=1;
         console.log(playerstatus);
+        document.getElementById("attack").innerHTML = "Attack ";
         };
 }
 
