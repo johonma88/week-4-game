@@ -20,6 +20,9 @@
   
   <!--link to fonts-->
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Autour+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
 
 </head>
@@ -82,20 +85,23 @@
             <br>
             <br>
      </div>
+</div> 
 
      <div class="container action">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                     <img class= "character" id="player" > 
                     <br>
                     <span id="hpPlayerGame"></span>
 
             </div>
-            <div class="col-lg-2">
-                <div class="button" id="attack" style="color:white;"></div>
+            <div class="col-lg-4">
+                <button class="button attackBtn" id="attack" ></button>
+                <p id="notes"></p>
+                <!-- <p id="msj"></p> -->
                     
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                         <img class= "character" id="enemy" >
                         <br> 
                         <span id="hpEnemyGame"></span>
@@ -104,7 +110,7 @@
         
         </div>     
     
-    </div> 
+  
 
     
 
@@ -116,7 +122,8 @@
  document.getElementById("hpHan").innerHTML = "Health Power: " + characters.hanSolo.hp;
  document.getElementById("hpYoda").innerHTML = "Health Power: " + characters.yoda.hp;
  document.getElementById("hpChewbacca").innerHTML = "Health Power: " + characters.chewbacca.hp; 
-
+ var hpPlayerResult=0;
+var hpEnemyResult=0;
 
  $(".colCharacter").click(function(){
         $(this).hide(); 
@@ -124,16 +131,25 @@
         console.log(character);
         console.log(playerstatus);
 
+
 if (playerstatus==0){
         if(character=="darthVader") {
-        console.log('hola');
         document.getElementById('player').src = 'assets/images/darth-vaider.png';
         playerstatus=1;
-        console.log(playerstatus);
         document.getElementById("msj").innerHTML = "Choose your enemy ";
         hpPlayer = characters.darthvader.hp;
+        attPlayer= characters.darthvader.attackPower;
+        playerName = characters.darthvader.name;
         document.getElementById("hpPlayerGame").innerHTML = hpPlayer;
-        console.log(hpPlayer);
+        hpPlayerResult=parseInt(hpPlayer);   
+        attackResult=parseInt(attPlayer);
+
+        console.log(playerstatus);
+        console.log('hola');
+        console.log("hpplayer " +hpPlayer);
+        console.log("hpplayerresult " + hpPlayerResult);
+        console.log("attackResult "+ attackResult);
+      
         };
 
         if(character=="captainPlasma") {
@@ -143,7 +159,12 @@ if (playerstatus==0){
         console.log(playerstatus);
         document.getElementById("msj").innerHTML = "Choose your enemy ";
         hpPlayer = characters.captainPlasma.hp;
+        attPlayer= characters.captainPlasma.attackPower;
+        playerName = characters.captainPlasma.name;
         document.getElementById("hpPlayerGame").innerHTML = hpPlayer;
+        hpPlayerResult=parseInt(hpPlayer);   
+        attackResult=parseInt(attPlayer);
+        // hpPlayerIn=hpPlayer;
         } ;
 
         if(character=="hanSolo") {
@@ -153,7 +174,12 @@ if (playerstatus==0){
         console.log(playerstatus);
         document.getElementById("msj").innerHTML = "Choose your enemy ";
         hpPlayer = characters.hanSolo.hp;
+        attPlayer= characters.hanSolo.attackPower;
         document.getElementById("hpPlayerGame").innerHTML = hpPlayer;
+        playerName = characters.hanSolo.name;
+        hpPlayerResult=parseInt(hpPlayer);   
+        attackResult=parseInt(attPlayer);
+        // hpPlayerIn=hpPlayer;
 
         } ;
         if(character=="yoda") {
@@ -163,8 +189,14 @@ if (playerstatus==0){
         console.log(playerstatus);
         document.getElementById("msj").innerHTML = "Choose your enemy ";
         hpPlayer = characters.yoda.hp;
+        attPlayer= characters.yoda.attackPower;
         document.getElementById("hpPlayerGame").innerHTML = hpPlayer;
+        playerName = characters.yoda.name;
+        hpPlayerResult=parseInt(hpPlayer);   
+        attackResult=parseInt(attPlayer);
+        // hpPlayerIn=hpPlayer;
         } ;
+
         if(character=="chewbacca") {
         console.log('hola');
         document.getElementById('player').src = 'assets/images/chewbacca.png';
@@ -172,7 +204,12 @@ if (playerstatus==0){
         console.log(playerstatus);
         document.getElementById("msj").innerHTML = "Choose your enemy ";
         hpPlayer = characters.chewbacca.hp;
+        attPlayer= characters.chewbacca.attackPower;
         document.getElementById("hpPlayerGame").innerHTML = hpPlayer;
+        playerName = characters.chewbacca.name;
+        hpPlayerResult=parseInt(hpPlayer);   
+        attackResult=parseInt(attPlayer);
+        // hpPlayerIn=hpPlayer;
         };
 }
 else {
@@ -182,8 +219,13 @@ else {
         playerstatus=1;
         console.log(playerstatus);
         document.getElementById("attack").innerHTML = "Attack ";
-        hpPlayer = characters.darthvader.hp;
-        document.getElementById("hpEnemyGame").innerHTML = hpPlayer;
+        hpEnemy = characters.darthvader.hp;
+        attEnemy = characters.darthvader.attackPower; 
+        enemyName= characters.darthvader.name;
+        document.getElementById("hpEnemyGame").innerHTML = hpEnemy;
+        hpEnemyResult=parseInt(hpEnemy);
+        document.getElementById("msj").innerHTML = "Attack";
+        console.log("hpEnemyResult "+hpEnemyResult);
         
         };
         if(character=="captainPlasma") {
@@ -192,8 +234,12 @@ else {
         playerstatus=1;
         console.log(playerstatus);
         document.getElementById("attack").innerHTML = "Attack ";
-        hpPlayer = characters.captainPlasma.hp;
-        document.getElementById("hpEnemyGame").innerHTML = hpPlayer;
+        hpEnemy = parseInt(characters.captainPlasma.hp) ;
+        attEnemy = parseInt(characters.captainPlasma.attackPower); 
+        document.getElementById("hpEnemyGame").innerHTML = hpEnemy;
+        enemyName= characters.captainPlasma.name;
+        document.getElementById("msj").innerHTML = "Attack";
+        hpEnemyResult=parseInt(hpEnemy);
         } ;
 
         if(character=="hanSolo") {
@@ -202,8 +248,13 @@ else {
         playerstatus=1;
         console.log(playerstatus);
         document.getElementById("attack").innerHTML = "Attack ";
-        hpPlayer = characters.hanSolo.hp;
-        document.getElementById("hpEnemyGame").innerHTML = hpPlayer;
+        hpEnemy = characters.hanSolo.hp;
+        attEnemy = characters.hanSolo.attackPower; 
+        document.getElementById("hpEnemyGame").innerHTML = hpEnemy;
+        enemyName= characters.hanSolo.name;
+        document.getElementById("msj").innerHTML = "Attack";
+        hpEnemyResult=parseInt(hpEnemy);
+        
         } ;
 
         if(character=="yoda") {
@@ -212,8 +263,13 @@ else {
         playerstatus=1;
         console.log(playerstatus);
         document.getElementById("attack").innerHTML = "Attack ";
-        hpPlayer = characters.yoda.hp;
-        document.getElementById("hpEnemyGame").innerHTML = hpPlayer;
+        hpEnemy = characters.yoda.hp;
+        attEnemy = characters.yoda.attackPower; 
+        document.getElementById("hpEnemyGame").innerHTML = hpEnemy;
+        enemyName= characters.yoda.name;
+        document.getElementById("msj").innerHTML = "Attack";
+        hpEnemyResult=parseInt(hpEnemy);
+        
         } ;
 
         if(character=="chewbacca") {
@@ -222,12 +278,62 @@ else {
         playerstatus=1;
         console.log(playerstatus);
         document.getElementById("attack").innerHTML = "Attack ";
-        hpPlayer = characters.chewbacca.hp;
-        document.getElementById("hpEnemyGame").innerHTML = hpPlayer;
+        hpEnemy = characters.chewbacca.hp;
+        attEnemy = characters.chewbacca.attackPower; 
+        document.getElementById("hpEnemyGame").innerHTML = hpEnemy;
+        enemyName= characters.chewbacca.name;
+        document.getElementById("msj").innerHTML = "Attack";
+        hpEnemyResult=parseInt(hpEnemy);
+        
         };
-}
+};
 
+
+
+
+
+        
 });
+$(".attackBtn").click(function(){
+        console.log('attack btn work');
+        console.log("enemy result " + hpEnemyResult);
+        console.log("player result " + hpPlayerResult);
+                if(hpPlayerResult>0){
+                        if (hpEnemyResult>0){
+                        
+                        document.getElementById("notes").innerHTML= playerName+' attacks with '+ attackResult +' power, '+enemyName +" attacks you with "+ attEnemy  ; 
+                        hpEnemyResult= hpEnemyResult-attackResult;
+                        hpPlayerResult= hpPlayerResult-attEnemy;
+                        attackResult= attackResult+attPlayer;
+                        document.getElementById("hpPlayerGame").innerHTML = hpPlayerResult;
+                        document.getElementById("hpEnemyGame").innerHTML = hpEnemyResult;
+                        // document.getElementById("notes").innerHTML= playerName+' attacks with '+ attackResult +' power, '+enemyName +" attacks you with "+ attEnemy  ;  
+
+                        console.log("enemy result " + hpEnemyResult);
+                        console.log("player result " + hpPlayerResult);
+                        console.log(attackResult);
+                        };
+                        if (hpEnemyResult<0){
+                                document.getElementById("msj").innerHTML = "Great!! You win!! Choose another Enemy";
+                                $('.attackBtn').hide;
+                        };
+                        if (hpPlayerResult<0){
+                                document.getElementById("msj").innerHTML = "You lost!!!!";
+                                $('.attackBtn').hide;
+                        }
+
+              
+
+       };  
+});
+     
+
+
+
+
+
+
+
 
 
 

@@ -15,6 +15,7 @@
     /* width: 350px; */
     text-align: center;
     color: white;
+    font-family: 'Rock Salt', cursive;
 }
 h2{
    
@@ -51,29 +52,42 @@ body{
     height:200px;
     width:160px;
     border:"none";
+    font-family: 'Rock Salt', cursive;
    
 }
 #enemy{
     height:200px;
     width:160px;
     border:"none";
+    font-family: 'Rock Salt', cursive;
     
 }
 
 #attack{
+    background-color: rgba(245, 245, 245, 0); /*transparency*/
     color: white;
     font-size: 30px;
     text-align: center;
+    border: solid;
+    font-family: 'Autour One', cursive;
 }
 
 #hpPlayerGame{
     color: white;
     font-size: 20px;
+    font-family: 'Rock Salt', cursive;
 }
 
 #hpEnemyGame{
     color: white;
     font-size: 20px;
+    font-family: 'Rock Salt', cursive;
+}
+
+#notes{
+    color: white;
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif;
 }
 
 
